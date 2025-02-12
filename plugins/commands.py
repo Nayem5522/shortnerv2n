@@ -368,6 +368,38 @@ async def me_handler(bot, m: Message):
         res, reply_markup=reply_markup, disable_web_page_preview=True
     )
 
+@Client.on_message(filters.command("reset_prime") & filters.private)
+@private_use
+async def reset_prime_settings(bot, message: Message):
+    user_id = message.from_user.id
+    user = await get_user(user_id)
+
+    if not user:
+        return await message.reply("You don't have any saved settings!")
+
+    # Reset user settings
+    await update_user_info(
+        user_id,
+        {
+            "shortener_api": "",
+            "mdisk_api": "",
+            "username": "",
+            "header_text": "",
+            "footer_text": "",
+            "banner_image": "",
+            "base_site": "teraboxlinks.com",  # Default site
+        },
+    )
+
+    await message.reply(
+        "✅ Your settings have been successfully reset!\n\n"
+        "You can now set up your API and preferences again:\n\n"
+        "/shortener_api - Set shortener API\n"
+        "/base_site - Change shortener site\n"
+        "/header - Set header text\n"
+        "/footer - Set footer text\n"
+        "/username - Set username"
+    )
 
 @Client.on_message(filters.command("include_domain") & filters.private)
 @private_use
