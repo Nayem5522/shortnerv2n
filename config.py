@@ -33,21 +33,21 @@ ADMINS.append(OWNER_ID) if OWNER_ID not in ADMINS else []
 
 #  Optionnal variables
 LOG_CHANNEL = int(
-    os.environ.get("LOG_CHANNEL", "0")
+    os.environ.get("LOG_CHANNEL", "-1002196408894")
 )  # log channel for information about users
 UPDATE_CHANNEL = int(os.environ.get(
-    "UPDATE_CHANNEL", False))  # For Force Subscription
+    "UPDATE_CHANNEL", "-1002245813234"))  # For Force Subscription
 BROADCAST_AS_COPY = is_enabled(
-    (os.environ.get("BROADCAST_AS_COPY", "False")), False
+    (os.environ.get("BROADCAST_AS_COPY", "True")), False
 )  # true if forward should be avoided
 IS_PRIVATE = is_enabled(
     os.environ.get("IS_PRIVATE", "False"), "False"
 )  # true for private use and restricting users
 SOURCE_CODE = os.environ.get(
-    "SOURCE_CODE", "https://github.com/kevinnadar22/URL-Shortener-V2"
+    "SOURCE_CODE", "https://t.me/Prime_Bots_Support_RoBot"
 )  # for upstream repo
 # image when someone hit /start
-WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", "")
+WELCOME_IMAGE = os.environ.get("WELCOME_IMAGE", "https://envs.sh/XX.jpg")
 LINK_BYPASS = is_enabled(
     (os.environ.get("LINK_BYPASS", "False")), False
 )  # if true, urls will be bypassed
