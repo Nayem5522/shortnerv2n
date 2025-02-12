@@ -17,8 +17,12 @@ Send me a link or post and I'll shorten it for you!
 
 To learn more about what I can do, just type /help.
 
-Method: {}
-Shortener website: {}
+I support all kinds of {}
+This bot current Shortener website is: {}
+
+Anyone who want to use any other shortner instead of Like this bot or than contact at 👉 <a href='https://t.me/Prime_Bots_Support_RoBot'> @ᴍʀ ᴘʀɪᴍᴇ ⚡</a> (all shortners support avilable.)
+
+- Made With ❤️ By @Prime_Botz -
 """
 
 HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
@@ -31,6 +35,7 @@ I have a ton of handy features to help you out, such as:
 - Header and footer text support 📝
 - Replace username function 📎
 - Banner image support 🖼️
+      ADMIN ONLY 
 - Batch conversion for channel admins only 📊
 - Channel support for admins only 📢
 
@@ -38,7 +43,7 @@ Useful commands:
 
 - /start: Start me up! You probably already used this.
 - /help: Send this message; I'll tell you more about myself!
-- /batch -100xxx: To shorten or convert all posts in your channel
+- /batch -100xxx: To shorten or convert all posts in your channel (admin Only)
 """
 
 ABOUT_TEXT = """
@@ -91,16 +96,15 @@ Here is a list of the channels:
 HELP_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Methods", callback_data="method_command"),
-            InlineKeyboardButton("Batch", callback_data="cbatch_command"),
+            InlineKeyboardButton("⚙️ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ ⚙️", url="https://t.me/Prime_Nayem"),
+            InlineKeyboardButton("👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ ꜱᴜᴘᴘᴏʀᴛ 👨‍💻", url="https://t.me/Prime_Bots_Support_RoBot"),
         ],
         [
-            InlineKeyboardButton("Custom Alias", callback_data="alias_conf"),
-            InlineKeyboardButton("Admins", callback_data="admins_list"),
+            InlineKeyboardButton("📢 ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ 📢", url="https://t.me/Prime_Botz"),
         ],
         [
-            InlineKeyboardButton("Channels", callback_data="channels_list"),
-            InlineKeyboardButton("Home", callback_data="start_command"),
+            InlineKeyboardButton("🤝 ѕᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 🤝", url="https://t.me/Prime_Botz_Support"),
+            InlineKeyboardButton("🏠 ʜᴏᴍᴇ 🏠", callback_data="start_command"),
         ],
     ]
 )
