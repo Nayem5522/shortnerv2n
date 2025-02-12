@@ -256,10 +256,14 @@ async def bypass_func(url):
     return c_link
 
 
-async def is_droplink_url(url):
+async def terabox_url(url):
     domain = urlparse(url).netloc
-    return url if "droplink.co" in domain else False
+    return url if "teraboxlinks.com" in domain else False  # নতুন শর্টেনিং সাইট যুক্ত করুন
 
+
+#async def is_droplink_url(url):
+   # domain = urlparse(url).netloc
+   # return url if "droplink.co" in domain else False
 
 async def broadcast_admins(c: Client, Message, sender=False):
     admins = ADMINS[:]
