@@ -52,7 +52,7 @@ async def private_link_handler(c: Client, message: Message):
                 logging.error("Make sure that the bot is admin in your log channel")
             await update_stats(message, user_method)
         except Exception as e:
-            await message.reply(f"Error while trying to convert links {e}:", quote=True)
+            await message.reply(f"Error while trying to convert links {e}: \n\nCheck everything again to see if something went wrong. If there is a problem with the API, it seems that there is an error or that the other site has given the API to the site you are using.", quote=True)
             logger.exception(e)
         finally:
             await txt.delete()
