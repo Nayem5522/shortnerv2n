@@ -20,17 +20,18 @@ async def forcesub_handler(c: Client, m: Message):
             buttons = [
                 [
                     InlineKeyboardButton(
-                        text="Updates Channel", url=invite_link.invite_link
+                        text="✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇", url=invite_link.invite_link
                     )
                 ]
             ]
             buttons.append(
-                [InlineKeyboardButton("🔄 Refresh", callback_data="sub_refresh")]
+                [InlineKeyboardButton("🔄 ʀᴇꜰʀᴇsʜ 🔄", callback_data="sub_refresh")]
             )
 
-            await m.reply_text(
-                f"Hey {m.from_user.mention(style='md')} you need join My updates channel in order to use me\n\n"
-                "Press the Following Button to join Now ",
+            # Send image and text together
+            await m.reply_photo(
+                photo="https://envs.sh/XFr.jpg",
+                caption=f"ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜꜱᴇ ᴍᴇ, ʏᴏᴜ ᴍᴜꜱᴛ ꜰɪʀꜱᴛ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ. ᴄʟɪᴄᴋ ᴏɴ \"✇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ✇\" ʙᴜᴛᴛᴏɴ.ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ \"ʀᴇǫᴜᴇꜱᴛ ᴛᴏ ᴊᴏɪɴ\" ʙᴜᴛᴛᴏɴ. ᴀꜰᴛᴇʀ ᴊᴏɪɴɪɴɢ, ᴄʟɪᴄᴋ ᴏɴ \"ʀᴇꜰʀᴇsʜ 🔄\" ʙᴜᴛᴛᴏɴ.",
                 reply_markup=InlineKeyboardMarkup(buttons),
                 quote=True,
             )
@@ -38,7 +39,7 @@ async def forcesub_handler(c: Client, m: Message):
         except Exception as e:
             print(e)
             await m.reply_text(
-                f"Something Wrong. Please try again later or contact {owner.mention(style='md')}",
+                f"Something went wrong. Please try again later or contact {owner.mention(style='md')}",
                 quote=True,
             )
             return
