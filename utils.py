@@ -367,14 +367,14 @@ async def user_api_check(user):
             return "\n\nSet your /mdisk_api to continue..."
     elif user_method == "shortener":
         if not user["shortener_api"]:
-            return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
+            return f"\n\nPlease Fast Set your /shortener_api to continue...\nCurrent Website {user['base_site']}"
     elif user_method == "mdlink":
         if not user["mdisk_api"]:
             return "\n\nSet your /mdisk_api to continue..."
         if not user["shortener_api"]:
             return f"\n\nSet your /shortener_api to continue...\nCurrent Website {user['base_site']}"
     else:
-        return "\n\nSet your /method first"
+        return "\n\nSet your /method first Than Click On Shortener Button To Continue"
     return True
 
 
@@ -392,23 +392,23 @@ async def create_server():
 
 async def set_commands(app):
     COMMANDS = [
-        BotCommand("start", "Used to start the bot."),
-        BotCommand("help", "Displays the help command."),
-        BotCommand("about", "Displays information about the bot."),
-        BotCommand("shortener_api", "Sets the shortener API."),
-        BotCommand("header", "Sets the header."),
-        BotCommand("footer", "Sets the footer."),
-        BotCommand("reset_prime", "Resets all settings to default. It will be like starting the bot for the first time."),
-        BotCommand("banner_image", "Sets the banner image."),
-        BotCommand("me", "Displays information about the bot."),
-        BotCommand("base_site", "Changes the base site."),
-        BotCommand("stats", "Displays statistics of the server and bot."),
-        BotCommand("batch", "Converts link for multiple posts (admin only)."),
-        BotCommand("logs", "Sends the log messages (admin only)."),
-        BotCommand("restart", "Restarts or re-deploys the server (admin only)."),
-        BotCommand("ban", "Bans users (admin only)."),
-        BotCommand("unban", "Unbans users (admin only)."),
-        BotCommand("info", "Gets user info (admin only)."),
+        BotCommand("start", "Used to start the bot.😉"),
+        BotCommand("help", "Displays the help command.👨‍🚒"),
+        BotCommand("about", "Displays information about the bot.👍"),
+        BotCommand("base_site", "Changes the base (shortener) site.😋"),
+        BotCommand("shortener_api", "Sets the shortener API.😍"),
+        BotCommand("header", "Sets the header.😉"),
+        BotCommand("footer", "Sets the footer.🥳"),
+        BotCommand("reset_prime", "Resets all settings to default. It will be like starting the bot for the first time.♻️"),
+        BotCommand("banner_image", "Sets the banner image.🌃"),
+        BotCommand("me", "Displays information about the bot.🤗"),
+        BotCommand("stats", "Displays statistics of the server and bot.😀"),
+        BotCommand("batch", "Converts link for multiple posts (admin only).☠️"),
+        BotCommand("logs", "Sends the log messages (admin only).☠️"),
+        BotCommand("restart", "Restarts or re-deploys the server (admin only).☠️"),
+        BotCommand("ban", "Bans users (admin only).☠️"),
+        BotCommand("unban", "Unbans users (admin only).☠️"),
+        BotCommand("info", "Gets user info (admin only).☠️"),
     ]
 
     await app.set_bot_commands(COMMANDS)
