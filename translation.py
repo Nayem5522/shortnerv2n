@@ -22,7 +22,7 @@ This bot current Shortener website is: {}
 
 Anyone who want to use any other shortner instead of Like this bot or than contact at 👉 <a href='https://t.me/Prime_Bots_Support_RoBot'> @ᴍʀ ᴘʀɪᴍᴇ ⚡</a> (all shortners support avilable.)
 
-- Made With ❤️ By @Prime_Botz -
+<blockquote> - ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ ʙʏ <a href='https://t.me/Prime_Botz'>ᴘʀɪᴍᴇ ʙᴏᴛz 🔥</a></blockquote>
 """
 
 HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
@@ -31,7 +31,6 @@ I have a ton of handy features to help you out, such as:
 
 - [Hyperlink](https://t.me/{username}) support 🔗
 - Button conversion support 🔘
-- Domain inclusion and exclusion options 🌐
 - Header and footer text support 📝
 - Replace username function 📎
 - Banner image support 🖼️
@@ -113,22 +112,21 @@ HELP_REPLY_MARKUP = InlineKeyboardMarkup(
 ABOUT_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Home", callback_data="start_command"),
-            InlineKeyboardButton("Help", callback_data="help_command"),
+            InlineKeyboardButton("ᴀᴅᴍɪɴ", url="https://t.me/Prime_Nayem"),
+            InlineKeyboardButton("👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Prime_Bots_Support_RoBot"),
         ],
-        [InlineKeyboardButton("Close", callback_data="delete")],
+        [InlineKeyboardButton("🏠 ʜᴏᴍᴇ 🏠", callback_data="start_command")],
     ]
 )
 
 START_MESSAGE_REPLY_MARKUP = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("Help", callback_data="help_command"),
-            InlineKeyboardButton("About", callback_data="about_command"),
+            InlineKeyboardButton("⛑️ ʜᴇʟᴘ 👨‍🚒", callback_data="help_command"),
+            InlineKeyboardButton("💁‍♂️ ᴀʙᴏᴜᴛ 😉", callback_data="about_command"),
         ],
         [
-            InlineKeyboardButton("Method", callback_data="method_command"),
-            InlineKeyboardButton("Close", callback_data="delete"),
+            InlineKeyboardButton("✧ ᴄʀᴇᴀᴛᴏʀ ✧", url="https://t.me/Prime_Nayem"),
         ],
     ]
 )
@@ -152,7 +150,7 @@ METHOD_REPLY_MARKUP = InlineKeyboardMarkup(
 )
 
 BACK_REPLY_MARKUP = InlineKeyboardMarkup(
-    [[InlineKeyboardButton("Back", callback_data="help_command")]]
+    [[InlineKeyboardButton("🔙 ʙᴀᴄᴋ 🔙", callback_data="help_command")]]
 )
 
 USER_ABOUT_MESSAGE = """
@@ -160,11 +158,9 @@ USER_ABOUT_MESSAGE = """
 
 - 🌐 Shortener website: {base_site}
 
-- 🧰 Method: {method}
+- 🧰 Here is your: {method}
 
 - 🔌 {base_site} API: {shortener_api}
-
-- 💾 Mdisk API: {mdisk_api}
 
 - 📎 Username: @{username}
 
