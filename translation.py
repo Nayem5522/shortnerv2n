@@ -20,29 +20,59 @@ To learn more about what I can do, just type /help.
 I support all kinds of {}
 This bot current Shortener website is: {}
 
-Anyone who want to use any other shortner instead of Like this bot or than contact at 👉 <a href='https://t.me/Prime_Bots_Support_RoBot'> @ᴍʀ ᴘʀɪᴍᴇ ⚡</a> (all shortners support avilable.)
+Anyone who want to use any other shortner instead of Like this bot or Want to create a bot like this for your own shortener? than contact at 👉 <a href='https://t.me/Prime_Bots_Support_RoBot'> @ᴍʀ ᴘʀɪᴍᴇ ⚡</a> (all shortners support avilable.)
 
 <blockquote> - ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ ʙʏ <a href='https://t.me/Prime_Botz'>ᴘʀɪᴍᴇ ʙᴏᴛz 🔥</a></blockquote>
 """
 
 HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
 
-I have a ton of handy features to help you out, such as:
+🤖 Bot Help Menu
 
-- [Hyperlink](https://t.me/{username}) support 🔗
-- Button conversion support 🔘
-- Header and footer text support 📝
-- Replace username function 📎
-- Banner image support 🖼️
-      ADMIN ONLY 
-- Batch conversion for channel admins only 📊
-- Channel support for admins only 📢
+I have brought many useful features for you! ✨
 
-Useful commands:
+🔹 User Commands
 
-- /start: Start me up! You probably already used this.
-- /help: Send this message; I'll tell you more about myself!
-- /batch -100xxx: To shorten or convert all posts in your channel (admin Only)
+👉 /start – Start the bot and begin using it. 😉
+👉 /help – Get details about how to use the bot. 👨‍🚒
+👉 /about – Learn more about the bot and its features. 👍
+👉 /me – View your profile details and bot-related info. 🤗
+👉 /stats – Check the current status of the bot and server. 😀
+
+🔹 Customization Commands
+
+👉 /base_site – Change the base site for URL shortening. 😋
+👉 /shortener_api – Set the API for your link shortener. 😍
+👉 /header – Add custom text at the top of messages. 😉
+👉 /footer – Add custom text at the bottom of messages. 🥳
+👉 /banner_image – Set a banner image (Admin Only). 🌃
+👉 /reset_prime – Reset all settings to default as if using the bot for the first time. ♻️
+
+🔥 Admin Commands
+
+🔹 (Admin Only Features)
+👉 /batch -100xxx – Convert or shorten all posts in a channel. 📊
+👉 /logs – Retrieve bot log messages. 🔍
+👉 /restart – Restart or redeploy the bot server. 🔄
+👉 /ban – Ban a user from the bot. 🚫
+👉 /unban – Unban a previously banned user. ✅
+👉 /info – Get details about a specific user. ℹ️
+
+⚡ Special Features
+
+🔗 [Hyperlink](https://t.me/{username}) support 🔗
+
+🔘 Button conversion support
+
+📝 Header & Footer text customization
+
+📎 Username replacement function
+
+🖼 Banner image support
+
+
+💡 Need help?
+👇 Contact an admin for assistance! 🚀
 """
 
 ABOUT_TEXT = """
@@ -158,7 +188,7 @@ USER_ABOUT_MESSAGE = """
 
 - 🌐 Shortener website: {base_site}
 
-- 🧰 Here is your: {method}
+- 🧰 Here is your: {method} Details 
 
 - 🔌 {base_site} API: {shortener_api}
 
