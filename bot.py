@@ -57,7 +57,7 @@ class Bot(Client):
 
         await set_commands(self)
 
-        await broadcast_admins(self, "** Bot started successfully **")
+        await broadcast_admins(self, "** Bot started successfully Powered by @Prime_Botz **")
         logging.info("Bot started")
 
         if WEB_SERVER:
@@ -66,6 +66,6 @@ class Bot(Client):
             logging.info("Pinging server")
 
     async def stop(self, *args, **kwargs):
-        await broadcast_admins(self, "** Bot Stopped Bye **")
+        await broadcast_admins(self, "** Bot Stopped Bye If You Face Any Problem Then Contact Our Developer @Prime_Bots_Support_RoBot **")
         await super().stop(*args, **kwargs)
         logging.info("Bot Stopped Bye")
