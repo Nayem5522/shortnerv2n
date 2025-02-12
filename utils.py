@@ -262,8 +262,8 @@ async def terabox_url(url):
 
 
 #async def is_droplink_url(url):
-   # domain = urlparse(url).netloc
-   # return url if "droplink.co" in domain else False
+    #domain = urlparse(url).netloc
+    #return url if "droplink.co" in domain else False
 
 async def broadcast_admins(c: Client, Message, sender=False):
     admins = ADMINS[:]
@@ -300,17 +300,26 @@ async def update_stats(m: Message, method):
         message = m.text.html
 
     mdisk_links = re.findall(
-        r'https?://mdisk.me[^\s`!()\[\]{};:".,<>?«»“”‘’]+', message
+        r'https?://mdisk.me[^\s`!(){};:".,<>?«»“”‘’]+', message
     )
     droplink_links = await extract_link(message)
-    total_links = len(droplink_links)
+
+    # ✅ Terabox লিংক বের করার জন্য নতুন Regex যোগ করো
+    terabox_links = re.findall(
+        r'https?://teraboxlinks.com[^\s`!(){};:".,<>?«»“”‘’]+', message
+    )
+
+    total_links = len(droplink_links) + len(terabox_links)  # মোট শর্ট লিংক সংখ্যা
+
     await db.update_posts(1)
+
     if method == "mdisk":
         droplink_links = []
+        terabox_links = []
     if method == "shortener":
         mdisk_links = []
-    await db.update_links(total_links, len(droplink_links), len(mdisk_links))
 
+    await db.update_links(total_links, len(droplink_links), len(mdisk_links), len(terabox_links))
 
 async def get_me_button(user):
     user_id = user["user_id"]
