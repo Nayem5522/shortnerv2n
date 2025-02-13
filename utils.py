@@ -397,6 +397,7 @@ async def set_commands(app):
         BotCommand("about", "Displays information about the bot.👍"),
         BotCommand("base_site", "Changes the base (shortener) site.😋"),
         BotCommand("shortener_api", "Sets the shortener API.😍"),
+        BotCommand("tutorial_prime", "See A tutorial how to use this Bot.✅"),
         BotCommand("header", "Sets the header.😉"),
         BotCommand("footer", "Sets the footer.🥳"),
         BotCommand("reset_prime", "Resets all settings to default. It will be like starting the bot for the first time.♻️"),
