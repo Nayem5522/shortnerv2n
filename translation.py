@@ -25,54 +25,41 @@ Anyone who want to use any other shortner instead of Like this bot or Want to cr
 <blockquote> - ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ ʙʏ <a href='https://t.me/Prime_Botz'>ᴘʀɪᴍᴇ ʙᴏᴛz 🔥</a></blockquote>
 """
 
-HELP_MESSAGE = """Hey there! My name is {firstname} and I'm a link convertor and shortener bot here to make your work easier and help you earn more 💰.
+HELP_MESSAGE = """Hey {firstname}! I'm a link converter & shortener bot, here to make your work easier and help you earn more 💰.
 
-🤖 Bot Help Menu
+🤖 **Bot Help Menu**  
 
-I have brought many useful features for you! ✨
+🔹 **User Commands**  
+/start – Start using the bot.  
+/help – Get bot usage details.  
+/about – Learn more about the bot.  
+/me – View your profile info.  
+/stats – Check bot & server status.  
 
-🔹 User Commands
+🔹 **Customization**  
+/base_site – Change URL shortener site.  
+/shortener_api – Set API for short links.  
+/header – Add text at the top.  
+/footer – Add text at the bottom.  
+/banner_image – Set a banner (Admin).  
+/reset_prime – Reset settings.  
 
-👉 /start – Start the bot and begin using it. 😉
-👉 /help – Get details about how to use the bot. 👨‍🚒
-👉 /about – Learn more about the bot and its features. 👍
-👉 /me – View your profile details and bot-related info. 🤗
-👉 /stats – Check the current status of the bot and server. 😀
+🔥 **Admin Commands**  
+/batch -100xxx – Convert all posts in a channel.  
+/logs – Get bot logs.  
+/restart – Restart bot server.  
+/ban – Ban a user.  
+/unban – Unban a user.  
+/info – Get user details.  
 
-🔹 Customization Commands
-
-👉 /base_site – Change the base site for URL shortening. 😋
-👉 /shortener_api – Set the API for your link shortener. 😍
-👉 /header – Add custom text at the top of messages. 😉
-👉 /footer – Add custom text at the bottom of messages. 🥳
-👉 /banner_image – Set a banner image (Admin Only). 🌃
-👉 /reset_prime – Reset all settings to default as if using the bot for the first time. ♻️
-
-🔥 Admin Commands
-
-🔹 (Admin Only Features)
-👉 /batch -100xxx – Convert or shorten all posts in a channel. 📊
-👉 /logs – Retrieve bot log messages. 🔍
-👉 /restart – Restart or redeploy the bot server. 🔄
-👉 /ban – Ban a user from the bot. 🚫
-👉 /unban – Unban a previously banned user. ✅
-👉 /info – Get details about a specific user. ℹ️
-
-⚡ Special Features
-
+⚡ **Special Features**  
 🔗 [Hyperlink](https://t.me/{username}) support 🔗
+🔘 Button conversion enabled.  
+📝 Custom Header & Footer.  
+📎 Username replacement function.  
+🖼 Banner image support.  
 
-🔘 Button conversion support
-
-📝 Header & Footer text customization
-
-📎 Username replacement function
-
-🖼 Banner image support
-
-
-💡 Need help?
-👇 Contact an admin for assistance! 🚀
+💡 Need help? Contact an admin! 🚀  
 """
 
 ABOUT_TEXT = """
