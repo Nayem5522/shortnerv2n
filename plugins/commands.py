@@ -583,24 +583,24 @@ async def get_user_info_handler(c: Client, m: Message):
 @private_use
 async def tutorial_prime_handler(c: Client, m: Message):
     tutorial_text = (
-        Prime URL Shortener Tutorial
+        """Prime URL Shortener Tutorial
 
 Easily shorten and customize links with this bot. Use the commands below:
 
-1️⃣ Set Shortener API:
+1.Set Shortener API:
 /shortener_api <YOUR_API>
 
-2️⃣ Change Shortener Site (Default: teraboxlinks.com):
+2.Change Shortener Site (Default: teraboxlinks.com):
 /base_site <SITE_NAME>
 
-3️⃣ Set Header Text:
+3.Set Header Text:
 /header <TEXT>
 
-4️⃣ Set Footer Text:
+4.Set Footer Text:
 /footer <TEXT>
 
-5️⃣ Set Username:
-/username <YOUR_NAME>
+5.Set Username:
+/username <YOUR_NAME>"""
 
     )
 
