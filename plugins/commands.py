@@ -4,16 +4,16 @@ import logging
 
 from validators import domain
 from config import (
-    ADMINS,
-    LOG_CHANNEL,
-    SOURCE_CODE,
-    WELCOME_IMAGE,
+ADMINS,
+LOG_CHANNEL,
+SOURCE_CODE,
+WELCOME_IMAGE,
 )
 from database import db
 from database.users import get_user, is_user_exist, total_users_count, update_user_info
 from helpers import temp
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from pyrogram.types import Message
 from plugins.filters import private_use
 from translation import *
 from utils import extract_link, get_me_button, get_size
@@ -402,37 +402,6 @@ async def reset_prime_settings(bot, message: Message):
     )
 
 
-
-@Client.on_message(filters.command("tutorial_prime") & filters.private)
-@private_use
-async def tutorial_prime(bot, message: Message):
-    tutorial_text = (
-        "**📌 Prime URL Shortener Tutorial**\n\n"
-        "Easily shorten and customize links with this bot. Follow the steps below to configure your settings:\n\n"
-        "1️⃣ **Set Shortener API:**\n"
-        "   ➜ `/shortener_api <YOUR_API>`\n"
-        "2️⃣ **Change Shortener Site:**\n"
-        "   ➜ `/base_site <SITE_NAME>` (Default: teraboxlinks.com)\n"
-        "3️⃣ **Set Header Text:**\n"
-        "   ➜ `/header <TEXT>`\n"
-        "4️⃣ **Set Footer Text:**\n"
-        "   ➜ `/footer <TEXT>`\n"
-        "5️⃣ **Set Username:**\n"
-        "   ➜ `/username <YOUR_NAME>`\n\n"
-    )
-
-    tutorial_image = "https://envs.sh/EPD.jpg"
-
-    keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("💡 Get Your API Key 💡", url="https://teraboxlinks.com/member/tools/api")],
-        [InlineKeyboardButton("⚙️ Admin Support ⚙️", url="https://t.me/Prime_Nayem")],
-    ])
-
-    await message.reply_photo(
-        photo=tutorial_image,
-        caption=tutorial_text,
-        reply_markup=keyboard
-    )
 
 
 @Client.on_message(filters.command("include_domain") & filters.private)
