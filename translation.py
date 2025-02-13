@@ -28,8 +28,6 @@ Anyone who want to use any other shortner instead of Like this bot or Want to cr
 
 HELP_MESSAGE = """Hey Dear ❤️ I'm a link converter & shortener bot, here to make your work easier and help you earn more 💰.
 
-🤖 **Bot Help Menu**  
-
 🔹 **User Commands**  
 /start – Start using the bot.  
 /help – Get bot usage details.  
@@ -61,8 +59,6 @@ HELP_MESSAGE = """Hey Dear ❤️ I'm a link converter & shortener bot, here to 
 🖼 Banner image support.  
 
 ✅ If you don't know how to use it Then just click. /tutorial_prime
-
-💡 Need help? Contact an admin! 🚀  
 """
 
 ABOUT_TEXT = """
