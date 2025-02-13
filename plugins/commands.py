@@ -403,6 +403,26 @@ async def reset_prime_settings(bot, message: Message):
 
 
 
+@Client.on_message(filters.command("tutorial_prime") & filters.private)
+@private_use
+async def tutorial_prime_handler(c: Client, m: Message):
+    tutorial_text = (
+        "**Prime URL Shortener Tutorial**\n\n"
+        "Easily shorten and customize links with this bot. Follow the steps below to configure your settings:\n\n"
+        "1️⃣ **Set Shortener API:**\n"
+        "   ➜ `/shortener_api <YOUR_API>`\n"
+        "2️⃣ **Change Shortener Site:**\n"
+        "   ➜ `/base_site <SITE_NAME>` (Default: teraboxlinks.com)\n"
+        "3️⃣ **Set Header Text:**\n"
+        "   ➜ `/header <TEXT>`\n"
+        "4️⃣ **Set Footer Text:**\n"
+        "   ➜ `/footer <TEXT>`\n"
+        "5️⃣ **Set Username:**\n"
+        "   ➜ `/username <YOUR_NAME>`\n"
+    )
+
+    await m.reply_text(tutorial_text, disable_web_page_preview=True)
+
 
 @Client.on_message(filters.command("include_domain") & filters.private)
 @private_use
