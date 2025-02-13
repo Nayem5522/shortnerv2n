@@ -598,9 +598,7 @@ Easily shorten and customize links with this bot. Follow the steps below to conf
 👉 /footer <TEXT>\n
 5. Set Username:\n
   👉 /username <YOUR_NAME>\n"""
-
     )
 
-    await m.reply_text(tutorial_text, disable_web_page_preview=True)
-
+    await m.reply_text(tutorial_text, disable_web_page_preview=True, reply_markup=USERS_TUTORIAL_BUTTON)
 
