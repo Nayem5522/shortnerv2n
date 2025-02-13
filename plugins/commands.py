@@ -579,9 +579,9 @@ async def get_user_info_handler(c: Client, m: Message):
         logging.error(e)
 
 
-@Client.on_message(filters.command("tutorial_prime") & filters.private)
+@Client.on_message(filters.command("kgf") & filters.private)
 @private_use
-async def tutorial_prime_handler(c: Client, m: Message):
+async def kgf_handler(c: Client, m: Message):
     tutorial_text = (
         "**Prime URL Shortener Tutorial**\n\n"
         "Easily shorten and customize links with this bot. Follow the steps below to configure your settings:\n\n"
