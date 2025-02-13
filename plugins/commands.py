@@ -579,22 +579,29 @@ async def get_user_info_handler(c: Client, m: Message):
         logging.error(e)
 
 
-@Client.on_message(filters.command("kgf") & filters.private)
+@Client.on_message(filters.command("tutorial_prime") & filters.private)
 @private_use
-async def kgf_handler(c: Client, m: Message):
+async def tutorial_prime_handler(c: Client, m: Message):
     tutorial_text = (
-        "**Prime URL Shortener Tutorial**\n\n"
-        "Easily shorten and customize links with this bot. Follow the steps below to configure your settings:\n\n"
-        "1️⃣ **Set Shortener API:**\n"
-        "   ➜ `/shortener_api <YOUR_API>`\n"
-        "2️⃣ **Change Shortener Site:**\n"
-        "   ➜ `/base_site <SITE_NAME>` (Default: teraboxlinks.com)\n"
-        "3️⃣ **Set Header Text:**\n"
-        "   ➜ `/header <TEXT>`\n"
-        "4️⃣ **Set Footer Text:**\n"
-        "   ➜ `/footer <TEXT>`\n"
-        "5️⃣ **Set Username:**\n"
-        "   ➜ `/username <YOUR_NAME>`\n"
+        Prime URL Shortener Tutorial
+
+Easily shorten and customize links with this bot. Use the commands below:
+
+1️⃣ Set Shortener API:
+/shortener_api <YOUR_API>
+
+2️⃣ Change Shortener Site (Default: teraboxlinks.com):
+/base_site <SITE_NAME>
+
+3️⃣ Set Header Text:
+/header <TEXT>
+
+4️⃣ Set Footer Text:
+/footer <TEXT>
+
+5️⃣ Set Username:
+/username <YOUR_NAME>
+
     )
 
     await m.reply_text(tutorial_text, disable_web_page_preview=True)
