@@ -26,7 +26,7 @@ Anyone who want to use any other shortner instead of Like this bot or Want to cr
 <blockquote> - ᴍᴀᴅᴇ ᴡɪᴛʜ ❤️ ʙʏ <a href='https://t.me/Prime_Botz'>ᴘʀɪᴍᴇ ʙᴏᴛz 🔥</a></blockquote>
 """
 
-HELP_MESSAGE = """Hey {firstname}! I'm a link converter & shortener bot, here to make your work easier and help you earn more 💰.
+HELP_MESSAGE = """Hey Dear ❤️ I'm a link converter & shortener bot, here to make your work easier and help you earn more 💰.
 
 🤖 **Bot Help Menu**  
 
