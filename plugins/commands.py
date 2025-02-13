@@ -402,7 +402,9 @@ async def reset_prime_settings(bot, message: Message):
     )
 
 
+
 @Client.on_message(filters.command("tutorial_prime") & filters.private)
+@private_use
 async def tutorial_prime(bot, message: Message):
     tutorial_text = (
         "**📌 Prime URL Shortener Tutorial**\n\n"
@@ -422,8 +424,8 @@ async def tutorial_prime(bot, message: Message):
     tutorial_image = "https://envs.sh/EPD.jpg"
 
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("💡 Get Your API Key", url="https://teraboxlinks.com/member/tools/api")],
-        [InlineKeyboardButton("⚙️ Admin Support", url="https:t.me/Prime_Nayem")],
+        [InlineKeyboardButton("💡 Get Your API Key 💡", url="https://teraboxlinks.com/member/tools/api")],
+        [InlineKeyboardButton("⚙️ Admin Support ⚙️", url="https://t.me/Prime_Nayem")],
     ])
 
     await message.reply_photo(
