@@ -534,6 +534,39 @@ async def unban_user_handler(c: Client, m: Message):
                 await m.reply("User doesn't exist")
     except Exception as e:
         logging.exception(e, exc_info=True)
+        
+
+@Client.on_message(filters.command("tutorial_prime") & filters.private)
+@private_use
+async def tutorial_prime(bot, message: Message):
+    tutorial_text = (
+        "**📌 Prime URL Shortener Tutorial**\n\n"
+        "Easily shorten and customize links with this bot. Follow the steps below to configure your settings:\n\n"
+        "1️⃣ **Set Shortener API:**\n"
+        "   ➜ `/shortener_api <YOUR_API>`\n"
+        "2️⃣ **Change Shortener Site:**\n"
+        "   ➜ `/base_site <SITE_NAME>` (Default: teraboxlinks.com)\n"
+        "3️⃣ **Set Header Text:**\n"
+        "   ➜ `/header <TEXT>`\n"
+        "4️⃣ **Set Footer Text:**\n"
+        "   ➜ `/footer <TEXT>`\n"
+        "5️⃣ **Set Username:**\n"
+        "   ➜ `/username <YOUR_NAME>`\n\n"
+       # "🎥 Watch the tutorial video below for more details "
+    )
+
+    tutorial_image = "https://envs.sh/EPD.jpg"
+
+    keyboard = InlineKeyboardMarkup([
+        [InlineKeyboardButton("💡 ɢᴇᴛ ʏᴏᴜʀ ᴀᴘɪ ᴋᴇʏ 💡", url="https://teraboxlinks.com/member/tools/api")],
+        [InlineKeyboardButton("⚙️ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ ⚙️", url="https:t.me/Prime_Nayem")],
+    ])  #💡 Get Your API Key💡 ɢᴇᴛ ʏᴏᴜʀ ᴀᴘɪ ᴋᴇʏ 💡https://teraboxlinks.com/member/tools/api
+
+    await message.reply_photo(
+        photo=tutorial_image,
+        caption=tutorial_text,
+        reply_markup=keyboard
+    )
 
 
 @Client.on_message(filters.command("info") & filters.private & filters.user(ADMINS))
