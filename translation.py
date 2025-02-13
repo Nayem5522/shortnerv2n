@@ -16,8 +16,7 @@ START_MESSAGE = """Hi there {}
 Send me a link or post and I'll shorten it for you!
 
 To learn more about what I can do, just type /help.
-✅ If you don't know how to use it 
-Then just click /tutorial_prime
+✅ If you don't know how to use it \nThen just click /tutorial_prime
 
 I support all kinds of {}
 This bot current Shortener website is: {}
@@ -59,8 +58,7 @@ HELP_MESSAGE = """Hey Dear ❤️ I'm a link converter & shortener bot, here to 
 📎 Username replacement function.  
 🖼 Banner image support.  
 
-✅ If you don't know how to use it 
-Then just click. /tutorial_prime
+✅ If you don't know how to use it \nThen just click /tutorial_prime
 """
 
 ABOUT_TEXT = """
