@@ -101,6 +101,13 @@ List of Admins who has access to this Bot
 {admin_list}
 """
 
+USERS_TUTORIAL_BUTTON = InlineKeyboardMarkup(
+    [
+        [InlineKeyboardButton("💡 ɢᴇᴛ ʏᴏᴜʀ ᴀᴘɪ ᴋᴇʏ 💡", url="https://Teraboxlinls.com/member/tools/api")],
+        [InlineKeyboardButton("⚙️ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ ⚙️", url="https://t.me/PRIME_Nayem")]
+    ]
+)
+
 
 CHANNELS_LIST_MESSAGE = """
 Here is a list of the channels:
