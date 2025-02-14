@@ -43,6 +43,8 @@ BROADCAST_AS_COPY = is_enabled(
 IS_PRIVATE = is_enabled(
     os.environ.get("IS_PRIVATE", "False"), "False"
 )  # true for private use and restricting users
+
+PRIME_TUTORIAL_IMAGE = os.environ.get("PRIME_TUTORIAL_IMAGE", "https://envs.sh/EPD.jpg")
 SOURCE_CODE = os.environ.get(
     "SOURCE_CODE", "https://t.me/Prime_Bots_Support_RoBot"
 )  # for upstream repo
