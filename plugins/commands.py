@@ -585,7 +585,7 @@ async def tutorial_prime_handler(c: Client, m: Message):
     tutorial_text = (
         """Prime URL Shortener Tutorial\n\n
 Easily shorten and customize links with this bot. Follow the steps below to configure your settings:\n\n
-1.Change Shortener Site:\n
+1. Change Shortener Site:\n
 👉 /base_site <SITE_NAME> (Default: teraboxlinks.com). If you need a different shortener than this one, you can change it with this command. যদি আপনি অন্য কোন শর্টনার ব্যবহার করতে চান তাহলে এই কমান্ডের মাধ্যমে ব্যবহার করতে পারবেন\n\n
 
 2. Set Shortener API:\n
@@ -596,9 +596,15 @@ Easily shorten and customize links with this bot. Follow the steps below to conf
 
 4. Set Footer Text (যে লিংকটা শর্ট হবে সেটার নিচে একটা লেখা থাকবে যেটা প্রত্যেকটা লিংক এর উপরে আসবে । আপনি চাইলে এটাকে সেট করতেও পারেন না করতেও পারেন):\n
 👉 /footer <TEXT>\n
+
 5. Set Username:\n
   👉 /username <YOUR_NAME>\n"""
     )
 
-    await m.reply_text(tutorial_text, disable_web_page_preview=True, reply_markup=USERS_TUTORIAL_BUTTON)
+    # এখানে ইমেজ এবং টেক্সট পাঠানো হচ্ছে
+    return await m.reply_photo(
+        photo=PRIME_TUTORIAL_IMAGE, 
+        caption=tutorial_text, 
+        reply_markup=USERS_TUTORIAL_BUTTON
+    )
 
