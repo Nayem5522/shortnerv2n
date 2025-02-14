@@ -579,32 +579,27 @@ async def get_user_info_handler(c: Client, m: Message):
         logging.error(e)
 
 
-@Client.on_message(filters.command("tutorial_prime") & filters.private)
-@private_use
-async def tutorial_prime_handler(c: Client, m: Message):
-    tutorial_text = (
-        """Prime URL Shortener Tutorial\n\n
-Easily shorten and customize links with this bot. Follow the steps below to configure your settings:\n\n
-1. Change Shortener Site:\n
-👉 /base_site <SITE_NAME> (Default: teraboxlinks.com). If you need a different shortener than this one, you can change it with this command. যদি আপনি অন্য কোন শর্টনার ব্যবহার করতে চান তাহলে এই কমান্ডের মাধ্যমে ব্যবহার করতে পারবেন\n\n
+@Client.on_message(filters.command("tutorial_prime") & filters.private)  
+@private_use  
+async def tutorial_prime_handler(c: Client, m: Message):  
+    tutorial_text = (  
+        """Prime URL Shortener Tutorial\n\n  
+Easily shorten and customize links with this bot. Follow the steps below to configure your settings:\n\n  
+1.Change Shortener Site:
+👉 /base_site <SITE_NAME> (Default: teraboxlinks.com). If you need a different shortener than this one, you can change it with this command. যদি আপনি অন্য কোন শর্টনার ব্যবহার করতে চান তাহলে এই কমান্ডের মাধ্যমে ব্যবহার করতে পারবেন\n\n  
+  
+2. Set Shortener API:
+👉 /shortener_api <YOUR_API> Please make sure to fill this out correctly; otherwise, the link will not be shortened. Kindly complete it accurately. এটাকে কিন্তু পূরণ করতেই হবে না হলে লিংক শর্ট হবে না । দয়া করে একটু সঠিক তথ্য দিয়ে পূরণ করুন যাতে পরবর্তীতে সমস্যা না হয়\n\n  
+  
+3. Set Header Text (যে লিংকটা শর্ট হবে সেটার উপরে একটা লেখা থাকবে যেটা প্রত্যেকটা লিংক এর উপরে আসবে । আপনি চাইলে এটাকে সেট করতেও পারেন না করতেও পারেন):
+👉 /header <TEXT>\n  
+  
+4. Set Footer Text (যে লিংকটা শর্ট হবে সেটার নিচে একটা লেখা থাকবে যেটা প্রত্যেকটা লিংক এর উপরে আসবে । আপনি চাইলে এটাকে সেট করতেও পারেন না করতেও পারেন):
+👉 /footer <TEXT>\n\n  
+5. Set Username:
+  👉 /username <YOUR_NAME>\n"""  
+    )  
+  
+    await m.reply_text(tutorial_text, disable_web_page_preview=True, reply_markup=USERS_TUTORIAL_BUTTON)
 
-2. Set Shortener API:\n
-👉 /shortener_api <YOUR_API> Please make sure to fill this out correctly; otherwise, the link will not be shortened. Kindly complete it accurately. এটাকে কিন্তু পূরণ করতেই হবে না হলে লিংক শর্ট হবে না । দয়া করে একটু সঠিক তথ্য দিয়ে পূরণ করুন যাতে পরবর্তীতে সমস্যা না হয়\n\n
-
-3. Set Header Text (যে লিংকটা শর্ট হবে সেটার উপরে একটা লেখা থাকবে যেটা প্রত্যেকটা লিংক এর উপরে আসবে । আপনি চাইলে এটাকে সেট করতেও পারেন না করতেও পারেন):\n
-👉 /header <TEXT>\n
-
-4. Set Footer Text (যে লিংকটা শর্ট হবে সেটার নিচে একটা লেখা থাকবে যেটা প্রত্যেকটা লিংক এর উপরে আসবে । আপনি চাইলে এটাকে সেট করতেও পারেন না করতেও পারেন):\n
-👉 /footer <TEXT>\n
-
-5. Set Username:\n
-  👉 /username <YOUR_NAME>\n"""
-    )
-
-    # এখানে ইমেজ এবং টেক্সট পাঠানো হচ্ছে
-    return await m.reply_photo(
-        photo=PRIME_TUTORIAL_IMAGE, 
-        caption=tutorial_text, 
-        reply_markup=USERS_TUTORIAL_BUTTON
-    )
 
