@@ -103,7 +103,6 @@ List of Admins who has access to this Bot
 
 USERS_TUTORIAL_BUTTON = InlineKeyboardMarkup(
     [
-        [InlineKeyboardButton("💡 ɢᴇᴛ ʏᴏᴜʀ ᴀᴘɪ ᴋᴇʏ 💡", url="https://Teraboxlinls.com/member/tools/api")],
         [InlineKeyboardButton("⚙️ ᴀᴅᴍɪɴ ꜱᴜᴘᴘᴏʀᴛ ⚙️", url="https://t.me/PRIME_Nayem")]
     ]
 )
